@@ -1,0 +1,29 @@
+Commandes utiles :
+
+BEFORE START :
+sudo docker stop$(sudo docker ps -qa); sudo docker rm $(sudo docker ps -qa); sudo docker rmi -f $(sudo docker image -qa); sudo docker volume rm $(sudo docker volume ls -q); sudo docker network rm $(sudo docker networl ls -q) 2> /dev/null
+
+DOCKER :
+sudo docker network ls
+sudo docker volume ls
+sudo docker image ls
+sudo docker container ls
+sudo docker-compose ps
+sudo docker run -it *container_name*
+sudo docker exec -it *container_name* bash
+sudo docker volume inspect *volume_name*
+sudo docker container inspect *container_name*
+sudo docker network inspect *network_name*
+
+
+Mariadb
+mysql -u $SQL_USER -p$SQL_PASSWORD
+SELECT user FROM mysql.user;
+SHOW TABLES;
+
+Wordpress
+mysql -u $SQL_USER -p$SQL_PASSWORD -h $SQL_HOST $SQL_DATABASE
+
+adresse sit web :
+https://cmaginot.42.fr
+https://cmaginot.42.fr/wp-admin/
